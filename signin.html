@@ -1,0 +1,165 @@
+<html>
+  <head>
+    <title>Soon bike taxi</title>
+    <style>
+      body {
+        background-image: url(assets/images/i.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: white;
+      }
+      .form-group label {
+        font-size: 16px;
+        color: #fff;
+        margin-bottom: 5px;
+        display: block;
+      }
+      .container {
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 4% 8%;
+        border-radius: 15px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        width: 300px;
+        text-align: center;
+      }
+      h2 {
+        color: #ff4444;
+        margin-bottom: 20px;
+      }
+      .form-group {
+        margin-bottom: 20px;
+        text-align: left;
+      }
+      .form-group input {
+        width: calc(100% - 22px);
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 10px;
+        margin: 10px 0 10px 0;
+        border: 2px solid #fff;
+        background-color: rgba(0, 0, 0, 0.3);
+        color: #fff;
+        margin-bottom: 10px;
+      }
+      .form-group button {
+        margin: 15px 0 20px 30%;
+        width: 40%;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 10px;
+        border: none;
+        background-color: #ff4444;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      .form-group button:hover {
+        background-color: #e33e3e;
+      }
+      .switch-form {
+        margin-top: 20px;
+      }
+      .switch-form p {
+        color: #fff;
+      }
+      .switch-form a {
+        color: #ff4444;
+        text-decoration: none;
+      }
+      .switch-form a:hover {
+        text-decoration: underline;
+      }
+      @media (max-width: 650px) {
+        .container {
+          width: 90%;
+          padding: 5% 5%;
+        }
+      }
+      @media (max-width: 500px) {
+        .container {
+          width: 100%;
+          padding: 10% 5%;
+        }
+        .form-group input,
+        .form-group button {
+          width: 100%;
+        }
+        h2,
+        .switch-form p {
+          font-size: 14px;
+        }
+      }
+      @media (max-width: 350px) {
+        .container {
+          width: 100%;
+          padding: 12% 10%;
+        }
+        h2 {
+          font-size: 18px;
+        }
+        .form-group input {
+          font-size: 18px;
+        }
+        .form-group button {
+          font-size: 18px;
+        }
+        .switch-form p {
+          font-size: 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>LOGIN</h2>
+      <form onsubmit="return signin()" action="home.html" id="login-form">
+        <div class="form-group">
+          <label for="name">User_Name</label>
+          <input
+            type="email"
+            id="gmail"
+            placeholder="Enter your Gmail"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="name">User_Name</label>
+          <input
+            type="password"
+            id="pass"
+            placeholder="Enter your password"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <button type="submit">Login</button>
+        </div>
+        <div class="switch-form">
+          <p>
+            Don't have an account?
+            <a href="index.html" id="signup-link">Sign up</a>
+          </p>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      function signin() {
+        var gmail = document.getElementById("gmail").value;
+        var password = document.getElementById("pass").value;
+        if (gmail === "" || password === "") {
+          return false;
+        } else {
+          return true;
+        }
+      }
+    </script>
+  </body>
+</html>

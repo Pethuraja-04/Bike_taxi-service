@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reviews</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+      }
+      h1 {
+        color: #333;
+      }
+      #piechart {
+        width: 100%;
+        max-width: 600px;
+        height: 400px;
+        margin: 20px auto;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Reviews</h1>
+    <div id="piechart"></div>
+
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <script type="text/javascript">
+      google.charts.load("current", { packages: ["corechart"] });
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ["Review", "Count"],
+          ["Good", 8],
+          ["Not bad", 2],
+          ["Normal", 4],
+          ["Bad", 2],
+          ["Very good", 8],
+        ]);
+
+        var options = {
+          title: "Average Reviews",
+          width: "100%",
+          height: "100%",
+          pieHole: 0.4,
+          slices: {
+            0: { color: "#3366CC" },
+            1: { color: "#DC3912" },
+            2: { color: "#FF9900" },
+            3: { color: "#109618" },
+            4: { color: "#990099" },
+          },
+        };
+
+        var chart = new google.visualization.PieChart(
+          document.getElementById("piechart")
+        );
+        chart.draw(data, options);
+      }
+    </script>
+  </body>
+</html>

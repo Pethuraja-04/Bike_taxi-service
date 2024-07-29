@@ -1,0 +1,157 @@
+<html>
+  <head>
+    <title>Bike Taxi Booking</title>
+    <script language="javascript">
+      function fun(form) {
+        alert("Bike Taxi Booking Successfully");
+      }
+    </script>
+    <style>
+      body {
+        background-image: url("home.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%100%;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        background-color: red;
+        color: #fff;
+        padding: 20px;
+      }
+
+      h1 {
+        margin: 0;
+      }
+
+      nav {
+        background-color: #f4f4f4;
+        padding: 10px;
+      }
+
+      nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      nav ul li {
+        display: inline;
+        margin-right: 10px;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: #333;
+        padding: 5px;
+      }
+
+      section {
+        padding: 20px;
+      }
+
+      footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
+
+      form {
+        max-width: 400px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: ;
+        border-radius: 5px;
+      }
+
+      form h2 {
+        margin-top: 0;
+      }
+
+      form label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      form input[type="text"],
+      form input[type="email"],
+      form select {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      form input[type="submit"] {
+        background-color: red;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      form input[type="submit"]:hover {
+        background-color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 align="center">Bike Taxi Booking</h1>
+    </header>
+
+    <nav>
+      <ul align="right">
+        <li><a href="large.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+    <section>
+      <form onsubmit="return pickuplocation()" action="selection.html">
+        <h2 align="center">Book a Ride</h2>
+
+        <label for="pickup">Pickup Location:</label>
+        <input
+          type="text"
+          id="pickup"
+          name="pickup"
+          placeholder="Pickup location"
+          required
+        />
+        <br /><br />
+        <label for="destination">Destination:</label>
+        <input
+          type="text"
+          id="destination"
+          name="destination"
+          placeholder="Destination"
+          required
+        />
+        <br />
+        <br /><br />
+        <center>
+          <input type="submit" value="Book Now" name="a" />
+        </center>
+      </form>
+    </section>
+    <script>
+      function pickuplocation() {
+        var pickup = document.getElementById("pickup");
+        var destination = document.getElementById("destination");
+        if (pickup == "" || destination == "") {
+          return false;
+        } else {
+          return true;
+        }
+      }
+    </script>
+  </body>
+</html>

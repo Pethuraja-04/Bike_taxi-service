@@ -1,0 +1,116 @@
+body {
+  background-image: url(images/home.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%100%;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  position: fixed;
+  background-color: red;
+  width: 100%;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+.heading {
+  margin-top: 150px;
+  font-size: 60px;
+  margin-bottom: 10px;
+}
+.subhead {
+  margin-top: 50px;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  margin: 0;
+}
+
+nav {
+  margin-top: 75px;
+  position: fixed;
+  width: 100%;
+  background-color: #f4f4f4;
+  padding: 10px;
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  padding: 5px;
+}
+
+section {
+  padding: 20px;
+  color: white;
+}
+.form-group button {
+  margin: 15px 0 20px 0%;
+  width: 20%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: none;
+  background-color: #ff0000;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+}
+.banner {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.services {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.services h3 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.services p {
+  margin-top: 50px;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.services ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.services li {
+  padding: 80px;
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.services img {
+  width: 150px;
+  height: 150px;
+}
